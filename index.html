@@ -5,6 +5,77 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>JS Events</title>
+        <script>
+            //I can write Js code here.
+        </script>
     </head>
-    <body></body>
+    <body>
+        <div class="d1">Hello Everyone</div>
+        <div class="d2">
+            <h1>Good Morning</h1>
+            <p>Have a Great Day !</p>
+        </div>
+
+        <form>
+            <input type="text" onkeyup="fun1(this)" />
+            <input type="text" onkeyup="fun2(this)" />
+            <select onchange="fun3(this)">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <textarea onkeyup="fun4(this)"></textarea>
+        </form>
+        <script>
+            let a = document.querySelector(".d1");
+            console.log(a); // this will select and show the div and its content both in console tab.
+            console.log(a.innerHTML); // this will only show the content of selected element.
+
+            let b = document.querySelector(".d2");
+            console.log(b); // this will show all the child tag of the selected div element and also their innert text as the structure.
+            console.log(b.innerHTML); // this will show all the inner tag and content but as normal text.
+            console.log(b.innerText); // this will only show the inner text of the child elements.
+
+            //I can write Js code here.
+        </script>
+        <script>
+            function fun1(x) {
+                console.log(x.value);
+            }
+
+            function fun2(y) {
+                console.log(y.value);
+            }
+
+            function fun3(z) {
+                console.log(z.value);
+            }
+
+            function fun4(s) {
+                console.log(s.value);
+            }
+
+            let student1 = {
+                //1. Property:Value
+                name: "Arpita",
+                surname: "sen",
+
+                //2. Method/Function
+                getName() {
+                    console.log(this.name);
+
+                    //object.method()
+                    this.getSname(); // I am calling the function internally
+                },
+                getSname() {
+                    console.log(this.surname);
+                },
+            }; //JS Object
+
+            student1.getName();
+            //student1.getSurname(); //I am calling the function externally
+
+            //object.method()
+        </script>
+    </body>
 </html>
